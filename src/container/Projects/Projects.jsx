@@ -43,13 +43,13 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="lg:w-5/6 min-h-screen bg-gray-200 border">
+    <section className="lg:w-5/6 min-h-screen bg-gray-200">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 1, delayChildren: 1 }}
-        className='pt-8'
+        id="projects"
       >
-        <h2 className="text-3xl font-semibold text-slate-700 [&>span]:text-blue-800 text-center">
+        <h2 className="text-3xl pt-20 font-semibold text-slate-700 [&>span]:text-blue-800 text-center">
           My Creative{" "}
           <span>
             Portfolio
@@ -58,12 +58,12 @@ const Projects = () => {
           Section
         </h2>
         <motion.div transition={{ duration: 0.5, delayChildren: 0.5 }}>
-          <div className="flex justify-center flex-wrap mt-4">
+          <div className="flex justify-center flex-wrap mt-4 ">
             {projects.map((item, index) => (
               <motion.div
                 whileInView={{ scale: [0, 1], opacity: [0, 1] }}
                 transition={{ duration: Math.random() }}
-                className="w-full lg:w-48 p-2 flex content-start items-start flex-col m-8 cursor-pointer bg-white rounded"
+                className="w-56 lg:w-52 p-2 flex content-start items-start flex-col m-8 cursor-pointer bg-white rounded"
                 key={`item.title-${index}`}
               >
                 <div className="relative group w-full">

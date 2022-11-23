@@ -4,12 +4,11 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <>
       <section
         id="contact"
-        className="lg:w-5/6 relative z-10 overflow-hidden bg-white"
+        className="lg:w-5/6 min-h-full overflow-hidden bg-white"
       >
-        <div className="flex flex-wrap lg:justify-between bg-gradient-to-r from-slate-300 ">
+        <div className="flex flex-wrap lg:justify-between bg-gradient-to-r from-indigo-300 pt-24">
           <div className="w-full pl-4 lg:w-1/2 xl:w-6/12 flex flex-col justify-center items-center">
             <motion.div
               whileInView={{ x: [-100, 0], opacity: [0, 1] }}
@@ -36,7 +35,6 @@ const Footer = () => {
           </div>
         </div>
       </section>
-    </>
   );
 };
 

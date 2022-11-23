@@ -17,20 +17,20 @@ const Header = () => {
   return (
     <section
       id="home"
-      className="flex pt-8 pb-8 justify-center w-full lg:w-5/6 flex-col lg:flex-row"
+      className="flex pt-8 pb-8 min-h-screen justify-center w-full lg:w-5/6 flex-col lg:flex-row"
     >
       <div className="relative lg:pl-14 lg:pt-14">
         <motion.div
           whileInView={{ x: [-100, 0], opacity: [0, 1] }}
           transition={{ duration: 0.5 }}
-          className="absolute h-full top-0 right-0 left-0 flex flex-col z-10 justify-center items-center"
+          className={"absolute h-full top-0 right-0 left-0 flex flex-col z-10 justify-center items-center"}
         >
           <div>
             <div>
               <div className="flex justify-center">
-                <span className="text-3xl my-auto">👋</span>
+                <span className="text-3xl my-auto animate-[wave_5s_ease-in-out_5]">👋</span>
                 <div className="ml-4">
-                  <p className="text-sm">Hello, I am</p>
+                  <p className="text-sm">Hi, I am</p>
                   <h1 className="text-3xl lg:text-4xl font-bold font-dm antialiased text-slate-800">
                     Ravi Ranjan Kumar
                   </h1>
@@ -40,7 +40,7 @@ const Header = () => {
                 Web Developer
               </p>
               <div className="mt-8">
-                <button className="animate-bounce bg-slate-800 text-yellow-50 hover:animate-none shadow-lg text-sm px-8 py-3 rounded-full">
+                <button className="bg-slate-800 text-yellow-50 hover:animate-none shadow-lg text-sm px-8 py-3 rounded-full">
                   Hire me
                 </button>
                 <button className="bg-yellow-50 text-slate-500 text-sm px-8 py-3 rounded-full ml-8 shadow-lg">
