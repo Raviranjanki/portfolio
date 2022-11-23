@@ -30,7 +30,7 @@ const Navbar = () => {
               <img src={images.about01} alt="" className="w-full h-full" />
             </div>
             <h3 className="text-center text-lg text-white mt-4">
-              Ravi Ranjan Kumar
+              Ravi Ranjan kumar
             </h3>
           </div>
 
