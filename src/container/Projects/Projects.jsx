@@ -49,7 +49,7 @@ const Projects = () => {
         transition={{ duration: 1, delayChildren: 1 }}
         id="projects"
       >
-        <h2 className="text-3xl pt-20 font-semibold text-slate-700 [&>span]:text-blue-800 text-center">
+        <h2 className="text-3xl pt-4 font-semibold text-slate-700 [&>span]:text-blue-800 text-center">
           My Creative{" "}
           <span>
             Portfolio
@@ -63,7 +63,7 @@ const Projects = () => {
               <motion.div
                 whileInView={{ scale: [0, 1], opacity: [0, 1] }}
                 transition={{ duration: Math.random() }}
-                className="w-56 lg:w-52 p-2 flex content-start items-start flex-col m-8 cursor-pointer bg-white rounded"
+                className="w-56 lg:w-56 p-2 flex content-start items-start flex-col m-4 cursor-pointer bg-white rounded"
                 key={`item.title-${index}`}
               >
                 <div className="relative group w-full">
