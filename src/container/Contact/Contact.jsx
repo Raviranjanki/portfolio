@@ -1,8 +1,10 @@
 import React from "react";
 import Form from "./Form";
 import { motion } from "framer-motion";
+import { send } from "emailjs-com";
 
 const Footer = () => {
+
   return (
       <section
         id="contact"
@@ -23,12 +25,12 @@ const Footer = () => {
               </p>
             </motion.div>
           </div>
-          <div className="w-full px-4 lg:w-2/4 my-8">
+          <div className="w-full px-4 lg:w-2/4 my-6">
             <motion.div
               whileInView={{ x: [100, 0], opacity: [0, 1] }}
               transition={{ duration: 0.85 }}
             >
-              <div className="relative rounded-lg p-8 shadow-lg sm:p-12 bg-blue-600">
+              <div className="relative rounded-lg p-8 shadow-lg  bg-blue-600">
                 <Form />
               </div>
             </motion.div>

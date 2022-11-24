@@ -14,7 +14,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="lg:w-5/6 py-14 lg:min-h-screen overflow-hidden"
+      className="lg:w-5/6 py-14 min-h-screen overflow-hidden"
     >
       <motion.h2
         whileInView={{ scale: [0, 1], opacity: [0, 1] }}

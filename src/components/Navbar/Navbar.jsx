@@ -26,7 +26,7 @@ const Navbar = () => {
       <nav className="sticky top-0 lg:static z-50 py-4 lg:py-0">
         <div className="z-50 h-screen fixed hidden justify-start lg:flex flex-col lg:w-1/6 text-gray-700" style={{ backgroundColor: "#336699" }}>
           <div>
-            <div className="border-2 w-32 h-32 rounded-full overflow-hidden mx-12 mt-12">
+            <div className="border-2 w-32 h-32 rounded-full mx-auto overflow-hidden mt-12">
               <img src={images.about01} alt="" className="w-full h-full" />
             </div>
             <h3 className="text-center text-lg text-white mt-4">
@@ -34,13 +34,13 @@ const Navbar = () => {
             </h3>
           </div>
 
-          <ul className="mt-4">
+          <ul className="mt-3 ml-4">
             {links.map((item) => (
               <li
-                className="flex mx-2 mt-4 w-full h-11"
+                className="flex mx-2 mt-3 w-full h-11"
                 key={`link-${item.title}`}
               >
-                <Link  smooth spy
+                <Link smooth spy
                   to={`${item.title}`}
                   className="cursor-pointer group flex text-center h-full text-gray-300 items-center rounded-full w-full focus:text-blue-500"
                   activeClass="text-red-400 font-medium"
@@ -48,7 +48,7 @@ const Navbar = () => {
                   <span className="text-xl text-center ml-2 group-[:hover]:text-red-400">
                     {item.icon}
                   </span>
-                  <span className="capitalize ml-2 group-[:hover]:text-white">
+                  <span className="uppercase ml-2 group-[:hover]:text-white">
                     {item.title}
                   </span>
                 </Link>
@@ -65,19 +65,24 @@ const Navbar = () => {
             />
           {toggle && (
             <motion.div
-              className="text-left uppercase fixed top-0 right-0 z-50 h-screen"
+              className="text-left uppercase fixed top-0 right-0 z-50 h-screen transparent"
               whileInView={{ x: [300, 0] }}
               transition={{ duration: 0.85, ease: "easeOut" }}
               style={{ backgroundColor: "#336699" }}
             >
-              <HiX className="m-1" onClick={() => setToggle(false)} />
-              <ul className="pl-6 w-80">
+              <HiX className="m-2 text-yellow-50 text-4xl" onClick={() => setToggle(false)} />
+              <ul className="px-6 w-80">
                 {links.map((item) => (
                   <li
                     className="my-8 hover:text-blue-800 font-medium text-sm cursor-pointer"
                     key={item.title}
                   >
-                    <Link activeClass="active" smooth spy to={`${item.title}`} onClick={() => setToggle(false)}>
+                    <Link smooth spy 
+                      to={`${item.title}`} onClick={() => setToggle(false)}
+                      className='w-full flex items-center font-medium'
+                      activeClass="text-yellow-50 [&>div]:visible"
+                    >
+                      <div className="w-2 h-2 rounded-full mr-2 invisible bg-white"></div>
                       {item.title}
                     </Link>
                   </li>
